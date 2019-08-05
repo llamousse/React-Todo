@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoList from './components/TodoComponents/TodoList.js';
+import TodoForm from './components/TodoComponents/TodoForm.js';
 
 import "./components/TodoComponents/Todo.css";
 
@@ -42,14 +43,27 @@ class App extends React.Component {
       })
     });
   };
+
+  addItem = itemName => {
+    const newItem = {
+      task: itemName,
+      id: Date.now(),
+      completed: false
+    }
+    this.setState({
+      todos: [...this.state.todos, newItem]
+    });
+  };
   
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+        <TodoForm addItem={this.addItem} />
         <TodoList 
           todos={this.state.todos}
           toggleItem={this.toggleItem}
+
         />
       </div>
     );
