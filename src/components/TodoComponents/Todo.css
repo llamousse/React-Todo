@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #5D78E8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+span {
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0 36px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.todoApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todoTitle {
+  margin: 0;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.todoTask {
+  color: black;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.inputStyle {
+  outline: none;
+  padding: 8px;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.todoTable {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 1.5rem;
+  width: 90%;
+  max-width: 700px;
+}
+
+.item {
+  background-color: #d1f4f6;
+  width: 45%;
+  margin: 8px 10px;
+}
+
+button {
+  background-color: yellow;
+  font-size: 16px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  outline: none;
+}
+
+button:hover {
+  background-color: #C573FF;
+  border-color: black;
+  cursor: pointer;
+}
+
+.add {
+  width: 75px;
+}
+
+.clear {
+  padding: 1rem;
+}
+
+.item.completed {
+  background-color: #d17d7c;
+  text-decoration: line-through;
+}
