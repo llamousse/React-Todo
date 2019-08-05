@@ -17,7 +17,10 @@ class TodoForm extends React.Component {
     submitItem = e => {
         e.preventDefault();
         this.props.addItem(this.state.todos);
-    }
+        this.setState({
+            todos: ''
+        });
+    };
 
     render() {
         return (
@@ -29,7 +32,7 @@ class TodoForm extends React.Component {
                     name="todos"
                     onChange={this.handleChange}
                 />
-                <button class="add">Add</button>
+                <button className="add">Add</button>
             </form>
         );
     }
