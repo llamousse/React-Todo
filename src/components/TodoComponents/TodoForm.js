@@ -23,12 +23,13 @@ class TodoForm extends React.Component {
         return (
             <form onSubmit={this.submitItem}>
                 <input
+                    className="inputStyle"
                     type="text"
                     value={this.state.todos}
                     name="todos"
                     onChange={this.handleChange}
                 />
-                <button>Add</button>
+                <button class="add">Add</button>
             </form>
         );
     }
